@@ -63,6 +63,23 @@ public class Sentencias_SQL {
             System.out.println(ex);
             return false;
         }
-
     }
+    
+    public boolean createE(String url){
+        c=new Conexion();
+        try {
+            String sql = "INSERT INTO log_evidencia (URL_Evidencia) VALUES (?)";
+            PreparedStatement ps = c.conectar().prepareStatement(sql);
+            ps.setString(1, url);
+            ps.executeUpdate();
+            System.out.println("Registrado :) ");
+            ps.close();
+            c.desconectar();
+            return true;
+        } catch (SQLException ex) {
+            System.out.println(ex);
+            return false;
+        }
+    }
+    
 }

@@ -16,6 +16,10 @@
         <servlet-name>Editar</servlet-name>
         <servlet-class>vistas.Editar</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>EvidenciasServlet</servlet-name>
+        <servlet-class>vistas.EvidenciasServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>buscarCreditos</servlet-name>
         <url-pattern>/buscarCreditos</url-pattern>
@@ -31,6 +35,10 @@
     <servlet-mapping>
         <servlet-name>Editar</servlet-name>
         <url-pattern>/Editar</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EvidenciasServlet</servlet-name>
+        <url-pattern>/EvidenciasServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

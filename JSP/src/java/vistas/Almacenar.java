@@ -12,5 +12,9 @@ public class Almacenar {
         Sentencias_SQL sen = new Sentencias_SQL();
         sen.editar(id_e,id_i,nom_e,f_i,f_f);
     }
+    public void RecibirEvidencia(String url){
+        Sentencias_SQL sen = new Sentencias_SQL();
+        sen.createE(url);
+    }
     
 }
