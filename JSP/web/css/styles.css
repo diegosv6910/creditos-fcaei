@@ -1,0 +1,21 @@
+#login{
+    position: absolute;
+    width: 18rem;
+    right:0.625rem;
+    left: 31.25rem;
+    top:6.2rem;
+}
+
+#form_matricula{
+    position: absolute;
+    width: 18rem;
+    right:0.625rem;
+    left: 31.25rem;
+    top:6.2rem;
+}
+#tabla_eventos{
+    position: absolute;
+    width: 35rem;
+    left:5rem;
+    top: 6.2rem;
+}
