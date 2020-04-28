@@ -74,5 +74,18 @@ public class EventosDAO implements listar {
         }
         return false;
     }
+
+    @Override
+    public boolean eliminar(int ID_Evento) {
+        String sql = "DELETE from eventos where ID_Evento="+ID_Evento;
+        try{
+        con=cn.conectar();
+        ps=con.prepareStatement(sql);
+        ps.executeUpdate();
+        }catch(SQLException ex){
+            System.out.println(ex);
+        }
+        return false;
+    }
     
 }

@@ -7,5 +7,6 @@ public interface listar {
     public List listar();
     public Eventos listar(int ID_Evento);
     public boolean editar(Eventos eve);
+    public boolean eliminar(int ID_Evento);
 }
 

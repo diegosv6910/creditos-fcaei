@@ -52,6 +52,10 @@ public class agregarUsuario extends HttpServlet{
             eve.setFecha_Final(F_F);
             dao.editar(eve);
             request.getRequestDispatcher("eventos.jsp").forward(request, response);
+        }else if(action.equalsIgnoreCase("eliminar")){
+            int id_e = Integer.parseInt(request.getParameter("ID_Evento"));
+            dao.eliminar(id_e);
+            acceso=listar;
         }
         RequestDispatcher vista=request.getRequestDispatcher(acceso);
         vista.forward(request,response);
