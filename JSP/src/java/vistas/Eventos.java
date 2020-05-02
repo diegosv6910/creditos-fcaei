@@ -7,7 +7,7 @@ public class Eventos {
     public String Fecha_Inicio;
     public String Fecha_Final;
     public String Nom_Inst;
-
+    public String Descripcion;
     
     
 
@@ -62,6 +62,15 @@ public class Eventos {
     public void setNom_Inst(String Nom_Inst) {
         this.Nom_Inst = Nom_Inst;
     }
+
+    public String getDescripcion() {
+        return Descripcion;
+    }
+
+    public void setDescripcion(String Descripcion) {
+        this.Descripcion = Descripcion;
+    }
+    
     
     
     

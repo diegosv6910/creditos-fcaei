@@ -20,6 +20,10 @@
         <servlet-name>EvidenciasServlet</servlet-name>
         <servlet-class>vistas.EvidenciasServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>servletLogin</servlet-name>
+        <servlet-class>vistas.servletLogin</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>buscarCreditos</servlet-name>
         <url-pattern>/buscarCreditos</url-pattern>
@@ -39,6 +43,10 @@
     <servlet-mapping>
         <servlet-name>EvidenciasServlet</servlet-name>
         <url-pattern>/EvidenciasServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>servletLogin</servlet-name>
+        <url-pattern>/servletLogin</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

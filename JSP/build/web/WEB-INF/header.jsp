@@ -1,10 +1,6 @@
-<%-- 
-    Document   : header
-    Created on : 25 abr. 2020, 15:45:54
-    Author     : diego
---%>
-
+<%@page import="java.io.PrintWriter"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +13,7 @@
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="index.jsp">Creditos FCAEI</a>
+        <a class="navbar-brand" href="index.jsp">Creditos FCAEI.</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -25,17 +21,17 @@
           <ul class="navbar-nav">
   
             <li class="nav-item">
-                <a class="nav-link" href="eventos.jsp">Eventos</a>
+                <a class="nav-link" href="eventos.jsp">Eventos.</a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="creditos.jsp">Mis Creditos</a>
+              <a class="nav-link" href="creditos.jsp">Mis Creditos.</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="evidencias.jsp">Evidencias</a>
+                <a class="nav-link" href="evidencias.jsp">Evidencias.</a>
               </li>
             <li class="nav-item">
-              <a class="nav-link" href="editar.jsp">Contacto</a>
+              <a class="nav-link" href="editar.jsp">Contacto.</a>
             </li>
           </ul>
         </div>

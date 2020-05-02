@@ -1,3 +1,4 @@
+<%@page session="true"%>
 <%@page import="vistas.Eventos"%>
 <%@page import="DAO.EventosDAO"%>
 <%@ include file="WEB-INF/header.jsp" %>  
@@ -21,6 +22,7 @@
         <input type="text" name="Nombre_Evento" class="form-control" placeholder="Nombre del Evento" value="<%= eve.getNombre_Evento() %>">
         <input type="text" name="Fecha_Inicio" class="form-control" placeholder="Fecha Inicio" value="<%= eve.getFecha_Inicio()  %>">
         <input type="text" name="Fecha_Fin" class="form-control" placeholder="Fecha Final" value="<%= eve.getFecha_Final() %>">
+        <input type="text" name="Descripcion" class="form-control" placeholder="Introduce Una Descripcion" value="<%= eve.getDescripcion() %>">
         <input type="submit" class="btn btn-primary" name="accion" value="Actualizar">
         </div>
         <a href="agregarUsuario?accion=lista"></a>

@@ -1,4 +1,5 @@
 <%@page import="vistas.Evidencias"%>
+<%@page session="true"%>
 <%@page import="DAO.EvidenciasDAO"%>
 <%@page import="java.util.Iterator"%>
 <%@page import="java.util.List"%>
@@ -42,7 +43,7 @@
 
 <form action="EvidenciasServlet" method="POST" style="position: absolute; top: 6.25rem; right: 15rem; width: 18rem;"
     <div class="form-group">
-        <input type="text" name="URL_EVIDENCIA" class="form-control" placeholder="URL_EVIDENCIA">
+        <input type="url" name="URL_EVIDENCIA" class="form-control" placeholder="URL_EVIDENCIA">
     </div>
     <button type="submit" class="btn btn-primary">Registrar Evidencia</button>
 </form>

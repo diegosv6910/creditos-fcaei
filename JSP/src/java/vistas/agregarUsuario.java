@@ -45,11 +45,13 @@ public class agregarUsuario extends HttpServlet{
             String N_E = request.getParameter("Nombre_Evento");
             String F_I = request.getParameter("Fecha_Inicio");
             String F_F = request.getParameter("Fecha_Fin");
+            String D_E = request.getParameter("Descripcion");
             eve.setID_Evento(id_e);
             eve.setID_Institucion(id_i);
             eve.setNombre_Evento(N_E);
             eve.setFecha_Inicio(F_I);
             eve.setFecha_Final(F_F);
+            eve.setDescripcion(D_E);
             dao.editar(eve);
             request.getRequestDispatcher("eventos.jsp").forward(request, response);
         }else if(action.equalsIgnoreCase("eliminar")){
@@ -70,8 +72,9 @@ public class agregarUsuario extends HttpServlet{
             String Nombre_Evento = request.getParameter("Nombre_Evento");
             String Fecha_Inicio = request.getParameter("Fecha_Inicio");
             String Fecha_Fin = request.getParameter("Fecha_Fin");
+            String Descripcion = request.getParameter("Descripcion");
             Almacenar a = new Almacenar();
-            a.Recibir(ID_Evento,ID_Institucion,Nombre_Evento,Fecha_Inicio,Fecha_Fin);
+            a.Recibir(ID_Evento,ID_Institucion,Nombre_Evento,Fecha_Inicio,Fecha_Fin,Descripcion);
             response.setContentType("text/html;charset=UTF-8");
             request.getRequestDispatcher("eventos.jsp").forward(request, response);
   
