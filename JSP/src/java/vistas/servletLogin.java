@@ -19,7 +19,12 @@ public class servletLogin extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+            response.setContentType("text/html;charset=UTF-8");
+            HttpSession sesion = request.getSession();
+            if(request.getParameter("cerrar")!=null){
+                sesion.invalidate();
+                response.sendRedirect("index.jsp");
+            }
     }
 
     @Override
@@ -49,7 +54,7 @@ public class servletLogin extends HttpServlet {
                     response.sendRedirect("creditos.jsp");
                     break;                   
                 default:
-                    out.print("No existe");
+                    response.sendRedirect("index.jsp");
             }
         }else{
             out.print("No mandaste ningun dato");

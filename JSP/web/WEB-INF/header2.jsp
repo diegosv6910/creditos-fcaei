@@ -1,6 +1,22 @@
 <%@page import="java.io.PrintWriter"%>
+<%@page session="true"%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
+<%
+
+    HttpSession sesion1 = request.getSession();
+        String user1;
+        String nivel1=null;
+        
+        if(sesion1.getAttribute("usuario")!=null && sesion1.getAttribute("nivel")!=null){
+        user1=sesion1.getAttribute("usuario").toString();
+        nivel1=sesion1.getAttribute("nivel").toString();
+        }else{
+            user1="invitado";
+        }
+
+%>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -22,17 +38,29 @@
           <ul class="navbar-nav">
   
             <li class="nav-item">
-                <a class="nav-link" href="eventos.jsp">Eventos.</a>
+                <%
+                    if(nivel1=="1"){
+                        out.print("<a class='nav-link' href='eventosEstudiantes.jsp'>Eventos.</a>");
+                    }else if(nivel1!="1"){
+                        out.print("<a class='nav-link' href='eventos.jsp'>Eventos.</a>");
+                    }
+                
+                %>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="creditos.jsp">Mis Creditos.</a>
+                <a class="nav-link" href="creditos.jsp">Creditos.</a> 
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="evidencias.jsp">Evidencias.</a>
               </li>
             <li class="nav-item">
               <a class="nav-link" href="editar.jsp">Contacto.</a>
+            </li>
+            <li class="nav-item">
+              <form action="servletLogin" method="POST">
+                <a class="nav-link" href="servletLogin?cerrar=true">Cerrar Sesion: <%=user1%>.</a>
+            </form>
             </li>
           </ul>
         </div>

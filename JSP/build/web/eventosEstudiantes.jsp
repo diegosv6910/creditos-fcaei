@@ -4,8 +4,25 @@
 <%@page import="vistas.Eventos"%>
 <%@page import="DAO.EventosDAO"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@ include file="WEB-INF/header.jsp" %>  
+<%@ include file="WEB-INF/header2.jsp" %>  
 <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+
+<%
+
+    HttpSession sesion = request.getSession();
+    String user;
+    String nivel;
+        
+        if(sesion.getAttribute("usuario")!=null && sesion.getAttribute("nivel")!=null){
+        user=sesion.getAttribute("usuario").toString();
+        nivel=sesion.getAttribute("nivel").toString();
+        if(nivel!="1"){
+            response.sendRedirect("eventos.jsp"); 
+        }
+        }else{
+            response.sendRedirect("index.jsp"); 
+        }
+%>
 
 <form id="tabla_eventos">
     <table class="table">

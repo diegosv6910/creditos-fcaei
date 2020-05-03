@@ -7,7 +7,7 @@
 <%@page import="vistas.Creditos"%>
 <%@page import="java.util.List"%>
 <%@page import="DAO.CreditosDAO"%>
-<%@ include file="WEB-INF/header.jsp" %>  
+<%@ include file="WEB-INF/header2.jsp" %>  
 <link rel="stylesheet" type="text/css" href="css/styles.css"/>
 
 <form id="tabla_eventos" style="width: 30rem">
